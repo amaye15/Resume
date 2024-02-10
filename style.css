@@ -1,39 +1,30 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    margin: 20px;
-}
-
-header h1 {
-    font-size: 28px;
-    color: #000;
-}
-
-header p {
-    font-size: 16px;
-    color: #666;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-section h2 {
-    font-size: 24px;
-    border-bottom: 2px solid #000;
-    margin-bottom: 10px;
-}
-
-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-section ul li {
-    background: #f4f4f4;
-    margin-bottom: 10px;
+.profile-container {
+    width: 210px; /* Size of the container */
+    height: 220px;
+    border-radius: 100%; /* Make the container circular */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    display: flex; /* To center the profile picture inside the container */
+    justify-content: center;
+    align-items: center;
+    background-color: #3e84be; /* The lighter part of the border */
+    padding: 5px; /* The size of the lighter border */
+  }
+.image-crop {
+    width: 200px; /* Adjust as necessary for the size of the profile picture */
+    height: 200px; /* Make it a square for the circle crop */
+    border-radius: 50%; /* This creates the circle effect */
+    overflow: hidden; /* Hides the excess parts of the image */
+    display: inline-block; /* Treats the container like an image */
+    position: relative; /* For potential positioning needs */
+    object-fit: cover; /* Ensures the image covers the area */
+    background-color: #0c71c3;
     padding: 10px;
-    border-radius: 5px;
-}
+  }
+  .image-crop img {
+    width: 100%; /* Ensure the image width is always 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute; /* Absolutely position the image */
+    top: 60%; /* Align the center of the image vertically */
+    left: 50%; /* Align the center of the image horizontally */
+    transform: translate(-50%, -50%); /* Offset the image to be truly centered */
+  }
